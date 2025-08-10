@@ -13,7 +13,7 @@ function Contact() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://ganesh-puja-api.onrender.com/contact", {
+      const res = await fetch("https://ganeshpuja-backend.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)

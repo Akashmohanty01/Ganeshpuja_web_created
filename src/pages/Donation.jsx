@@ -24,7 +24,7 @@ export default function Donation() {
     setStatus("");
 
     try {
-      const res = await fetch("https://ganesh-puja-api.onrender.com/donate", {
+      const res = await fetch("https://ganeshpuja-backend.onrender.com/donate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
