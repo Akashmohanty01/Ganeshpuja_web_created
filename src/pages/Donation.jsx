@@ -24,7 +24,7 @@ export default function Donation() {
     setStatus("");
 
     try {
-      const res = await fetch("http://localhost:5000/donate", {
+      const res = await fetch("https://ganesh-puja-api.onrender.com/donate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -116,21 +116,13 @@ export default function Donation() {
                 rows="4"
                 className="w-full px-4 py-3 rounded-lg bg-black border border-yellow-400 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
               ></textarea>
-
-              {/* Premium Gold Button */}
-   <button
-  type="submit"
-  disabled={loading || !isFormValid}
-  className="w-full bg-gradient-to-r from-green-600 via-green-500 to-green-400
-             hover:from-green-500 hover:via-green-400 hover:to-green-300
-             text-black font-bold py-3 rounded-lg transition duration-300
-             transform hover:scale-[1.03] shadow-lg hover:shadow-green-400/50
-             animate-pulse disabled:opacity-50 disabled:cursor-not-allowed"
->
-  {loading ? "Submitting..." : "💚 Submit Donation Details 💚"}
-</button>
-
-
+              <button
+                type="submit"
+                disabled={loading || !isFormValid}
+                className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-lg transition duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? "Submitting..." : "Submit Donation Details"}
+              </button>
             </form>
           </div>
 
